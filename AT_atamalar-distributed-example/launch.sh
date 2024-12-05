@@ -2,7 +2,8 @@
 
 # List files before running the training script
 echo "Files before training:"
-ls -R /demo/Meta-Llama-3.1-8B-Instruct-finetuned
+#ls -R /demo/Meta-Llama-3.1-8B-Instruct-finetuned
+ls -R /data/Meta-Llama-3.1-8B-Instruct-finetuned
 
 master_addr=$MASTER_ADDR
 master_port=$MASTER_PORT
@@ -19,4 +20,5 @@ torchrun --nproc_per_node=1 --nnodes=${job_n} --rdzv_endpoint=${master_addr}:${m
 
 # List files after running the training script
 echo "Files after training:"
-ls -R /demo/Meta-Llama-3.1-8B-Instruct-finetuned
+#ls -R /demo/Meta-Llama-3.1-8B-Instruct-finetuned
+ls -R /data/Meta-Llama-3.1-8B-Instruct-finetuned
